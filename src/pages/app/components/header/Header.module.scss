@@ -1,0 +1,39 @@
+.container {
+    min-width: calc(100vw - 30px);
+    width: auto;
+    min-height: 60px;
+    height: auto;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 3px 10px;
+    gap: 10px;
+
+    .left {
+        .textLogo {
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+
+        .cart {
+            cursor: pointer;
+            margin-right: 20px;
+
+            .iconcart {
+                font-size: 23px;
+            }
+        }
+        .avatar {
+            cursor: pointer;
+        }
+    }
+}
