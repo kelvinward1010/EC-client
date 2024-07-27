@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import { layoutUrl } from "./urls";
-import { ErrorBoundaryPage } from "@/components/error/boundary-error";
-import { Home } from "@/pages";
-import { Layout } from "@/pages/app/Layout";
+import { Layout } from "../pages/app/Layout";
+import { ErrorBoundaryPage } from "../components/error/boundary-error";
+import { Home } from "../pages";
 
 export const routerConfig = createBrowserRouter([
     {

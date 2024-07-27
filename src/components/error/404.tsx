@@ -1,6 +1,6 @@
-import { layoutUrl } from "@/routes/urls";
 import { Button, Result } from "antd";
 import { useNavigate } from "react-router-dom";
+import { layoutUrl } from "../../routes/urls";
 
 export function Error404() {
     const navigate = useNavigate();
