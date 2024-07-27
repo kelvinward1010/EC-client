@@ -76,7 +76,7 @@ function Header() {
             </div>
             <div className={styles.center}>Center</div>
             <div className={styles.right}>
-                <Badge count={5} className={styles.cart}>
+                <Badge status={"processing"} count={5} className={styles.cart}>
                     <ShoppingCartOutlined className={styles.iconcart} />
                 </Badge>
                 <Dropdown
