@@ -1,0 +1,14 @@
+.container {
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+
+    .main {
+        min-height: calc(100vh - 120px);
+        width: auto;
+        height: auto;
+        overflow-x: hidden !important;
+    }
+}
