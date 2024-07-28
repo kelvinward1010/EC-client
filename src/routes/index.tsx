@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import { layoutUrl, signinUrl, signupUrl } from "./urls";
+import { cartUrl, layoutUrl, signinUrl, signupUrl } from "./urls";
 import { Layout } from "../pages/app/Layout";
 import { ErrorBoundaryPage } from "../components/error/boundary-error";
-import { Home, Signin, Signup } from "../pages";
+import { Cart, Home, Signin, Signup } from "../pages";
 
 export const routerConfig = createBrowserRouter([
     {
@@ -25,6 +25,10 @@ export const routerConfig = createBrowserRouter([
             {
                 path: signupUrl,
                 element: <Signup />,
+            },
+            {
+                path: cartUrl,
+                element: <Cart />,
             },
         ],
     },

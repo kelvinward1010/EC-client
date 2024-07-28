@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    height: 304px;
+    border: 1px solid teal;
+    border-radius: 5px;
+    display: flex;
+
+    .left {
+        flex: 2;
+        width: 100%;
+        height: 100%;
+        padding: 0 2px;
+        border-right: 1px solid teal;
+    }
+
+    .right {
+        flex: 5;
+        width: 100%;
+        height: 100%;
+        padding: 0 2px;
+    }
+}

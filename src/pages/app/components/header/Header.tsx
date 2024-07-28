@@ -3,7 +3,12 @@ import styles from "./Header.module.scss";
 import { ShoppingCartOutlined, UserOutlined } from "@ant-design/icons";
 import { ButtonConfig } from "../../../../components/buttonconfig";
 import { useNavigate } from "react-router-dom";
-import { layoutUrl, signinUrl, signupUrl } from "../../../../routes/urls";
+import {
+    cartUrl,
+    layoutUrl,
+    signinUrl,
+    signupUrl,
+} from "../../../../routes/urls";
 
 const { Text } = Typography;
 
@@ -14,6 +19,7 @@ function Header() {
     const goSignup = () => navigate(signupUrl);
     const goSignin = () => navigate(signinUrl);
     const goHome = () => navigate(layoutUrl);
+    const goCart = () => navigate(cartUrl);
 
     const items = [
         {
@@ -77,7 +83,10 @@ function Header() {
             <div className={styles.center}>Center</div>
             <div className={styles.right}>
                 <Badge status={"processing"} count={5} className={styles.cart}>
-                    <ShoppingCartOutlined className={styles.iconcart} />
+                    <ShoppingCartOutlined
+                        onClick={goCart}
+                        className={styles.iconcart}
+                    />
                 </Badge>
                 <Dropdown
                     menu={{

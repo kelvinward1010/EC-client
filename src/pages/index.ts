@@ -14,3 +14,8 @@ export const Signin = lazyLoad(
     () => import("./sign-in/Signin"),
     (module) => module.Signin,
 );
+
+export const Cart = lazyLoad(
+    () => import("./cart/views/Cart"),
+    (module) => module.Cart,
+);
