@@ -1,9 +1,7 @@
-import { Carousel, Flex, Typography } from "antd";
+import { Carousel, Flex } from "antd";
 import styles from "./TopHeadHome.module.scss";
 import { DoubleRightOutlined } from "@ant-design/icons";
 import { TYPESPRODUCTS } from "../../../constant";
-
-const { Text } = Typography;
 
 function TopHeadHome() {
     return (
