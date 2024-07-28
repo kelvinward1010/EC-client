@@ -9,3 +9,7 @@ export type IProduct = {
     createdAt: string;
     updatedAt: string;
 };
+
+export interface IProductInCart extends IProduct {
+    yourquantity: number;
+}

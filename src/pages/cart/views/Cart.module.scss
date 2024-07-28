@@ -1,14 +1,32 @@
 .container {
     width: 100%;
     height: auto;
-    display: flex;
     padding: 10px;
 
     .left {
         flex: 4;
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100%;
+        min-height: calc(100vh - 225px);
+
+        .checkbox_group {
+            width: 100%;
+        }
     }
 
     .right {
         flex: 2;
+        width: auto;
+        max-width: 300px;
+        border: 1px solid teal;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 0 auto;
+        height: fit-content;
+
+        .button {
+            margin-top: 10px;
+        }
     }
 }

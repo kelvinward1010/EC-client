@@ -6,3 +6,12 @@
     background: teal;
     color: white;
 }
+
+.button-delete {
+    background: red;
+    color: white;
+}
+
+.ant-checkbox {
+    border: 1px solid teal;
+}

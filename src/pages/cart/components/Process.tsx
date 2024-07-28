@@ -17,7 +17,7 @@ const steps = [
     },
 ];
 
-function Process() {
+export function Process() {
     const { token } = theme.useToken();
     const [current, setCurrent] = useState(0);
 
