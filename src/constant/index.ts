@@ -1,1 +1,7 @@
-export const TYPESPRODUCTS = ["Fashion", "Electronic", "Book"];
+export const TYPESPRODUCTS = [
+    "Fashion",
+    "Electronic",
+    "Book",
+    "Toys",
+    "Appliances",
+];

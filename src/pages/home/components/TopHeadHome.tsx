@@ -16,7 +16,7 @@ function TopHeadHome() {
                         justify={"space-between"}
                         align={"center"}
                     >
-                        <Text className={styles.title}>{type}</Text>
+                        <text className={styles.title}>{type}</text>
                         <DoubleRightOutlined className={styles.icon} />
                     </Flex>
                 ))}

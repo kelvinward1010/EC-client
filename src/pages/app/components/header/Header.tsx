@@ -1,6 +1,10 @@
-import { Avatar, Badge, Dropdown, Typography } from "antd";
+import { Avatar, Badge, Dropdown, Input, Typography } from "antd";
 import styles from "./Header.module.scss";
-import { ShoppingCartOutlined, UserOutlined } from "@ant-design/icons";
+import {
+    SearchOutlined,
+    ShoppingCartOutlined,
+    UserOutlined,
+} from "@ant-design/icons";
 import { ButtonConfig } from "../../../../components/buttonconfig";
 import { useNavigate } from "react-router-dom";
 import {
@@ -80,7 +84,13 @@ function Header() {
                     Ecormerce
                 </Text>
             </div>
-            <div className={styles.center}>Center</div>
+            <div className={styles.center}>
+                <Input
+                    placeholder="Search title product..."
+                    prefix={<SearchOutlined />}
+                    className={styles.inputsearch}
+                />
+            </div>
             <div className={styles.right}>
                 <Badge status={"processing"} count={5} className={styles.cart}>
                     <ShoppingCartOutlined

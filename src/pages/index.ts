@@ -19,3 +19,8 @@ export const Cart = lazyLoad(
     () => import("./cart/views/Cart"),
     (module) => module.Cart,
 );
+
+export const ProductDetail = lazyLoad(
+    () => import("./productdetail/views/ProductDetail"),
+    (module) => module.ProductDetail,
+);
