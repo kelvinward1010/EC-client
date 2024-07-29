@@ -11,5 +11,5 @@ export type IProduct = {
 };
 
 export interface IProductInCart extends IProduct {
-    yourquantity: number;
+    quantityordered: number;
 }

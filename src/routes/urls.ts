@@ -7,3 +7,4 @@ export const cartUrl = "/cart";
 
 export const productUrl = "/product";
 export const productdetailUrl = `${productUrl}/:id`;
+export const processUrl = "/processing-to-buy";

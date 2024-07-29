@@ -1,19 +1,24 @@
 import { Checkbox, Col, GetProp, Row, Typography } from "antd";
 import styles from "./Cart.module.scss";
 import { useCallback, useEffect, useState } from "react";
-import { products } from "../../../data";
+import { dataInCart } from "../../../data";
 import { CheckBoxConfig } from "../components/CheckBoxConfig";
-import { IProduct } from "../../../types/product";
+import { IProductInCart } from "../../../types/product";
 import { ButtonConfig } from "../../../components/buttonconfig";
 import { totalPrice } from "../../../utils/equation";
+import { sessionService } from "../../../utils/storage";
+import { useNavigate } from "react-router-dom";
+import { processUrl } from "../../../routes/urls";
 
 type CheckboxValueType = GetProp<typeof Checkbox.Group, "value">[any];
 
 const { Text, Title } = Typography;
 
 export function Cart() {
+    const navigate = useNavigate();
     const [total, setTotal] = useState<number>(0);
     const [checkedList, setCheckedList] = useState<CheckboxValueType[]>([]);
+    const [data, setData] = useState<IProductInCart[]>([]);
 
     const onChange: GetProp<typeof Checkbox.Group, "onChange"> = useCallback(
         (checkedValues) => {
@@ -22,10 +27,19 @@ export function Cart() {
         [checkedList, setCheckedList],
     );
 
+    const handleNextStep = () => {
+        sessionService.setStorage("datatobuy", checkedList);
+        navigate(processUrl);
+    };
+
     useEffect(() => {
-        let prices = totalPrice(checkedList as IProduct[]);
+        let prices = totalPrice(checkedList as IProductInCart[]);
         setTotal(prices);
     }, [checkedList]);
+
+    useEffect(() => {
+        setData(dataInCart);
+    }, []);
 
     return (
         <div className={styles.container}>
@@ -36,16 +50,19 @@ export function Cart() {
                         onChange={onChange}
                         className={styles.checkbox_group}
                     >
-                        {products.slice(0, 3)?.map((item: IProduct) => (
+                        {data.slice(0, 3)?.map((item: IProductInCart) => (
                             <CheckBoxConfig
                                 data={item}
                                 key={item?._id}
                                 checked={() => {
-                                    const find_item = products?.find(
+                                    const find_item = checkedList?.find(
                                         (i: any) => i.id === item._id,
                                     );
                                     return find_item ? true : false;
                                 }}
+                                setData={setData}
+                                setCheckList={setCheckedList}
+                                checkedList={checkedList as IProductInCart[]}
                             />
                         ))}
                     </Checkbox.Group>
@@ -78,8 +95,10 @@ export function Cart() {
                     </Row>
                     <div className={styles.button}>
                         <ButtonConfig
+                            disabled={checkedList.length > 0 ? false : true}
                             lable={"Next step"}
                             className={"button-config"}
+                            onClick={handleNextStep}
                         />
                     </div>
                 </Col>

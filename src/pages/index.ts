@@ -20,6 +20,11 @@ export const Cart = lazyLoad(
     (module) => module.Cart,
 );
 
+export const ProcessingBuy = lazyLoad(
+    () => import("./cart/views/ProcessingBuy"),
+    (module) => module.ProcessingBuy,
+);
+
 export const ProductDetail = lazyLoad(
     () => import("./productdetail/views/ProductDetail"),
     (module) => module.ProductDetail,

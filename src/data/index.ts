@@ -1,4 +1,5 @@
 import { IProduct } from "../types/product";
+import { dataproduced } from "../utils/data";
 
 export const products: IProduct[] = [
     {
@@ -57,3 +58,5 @@ export const products: IProduct[] = [
         updatedAt: "20/07/2024",
     },
 ];
+
+export const dataInCart = dataproduced(products);

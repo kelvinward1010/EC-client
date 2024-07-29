@@ -1,11 +1,8 @@
-import { IProduct } from "../types/product";
+import { IProductInCart } from "../types/product";
 
-export const totalPrice = (data: IProduct[]) => {
-    let total: number = 0;
-
-    data?.forEach((item: IProduct) => {
-        total += Number(item.price);
-    });
-
-    return total;
+export const totalPrice = (data: IProductInCart[]): number => {
+    return data.reduce((acc, item) => {
+        const itemTotal = Number(item.price) * Number(item.quantityordered);
+        return acc + itemTotal;
+    }, 0);
 };

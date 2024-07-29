@@ -1,8 +1,8 @@
 .container {
     height: 100%;
-    width: 100%;
+    width: calc(100% - 20px);
     max-height: 200px;
-    margin-top: 10px;
+    margin: 10px;
     box-shadow:
         rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
         rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -21,15 +21,6 @@
         .name {
             font-weight: 500;
             cursor: pointer;
-        }
-
-        .quantity {
-            display: flex;
-            align-items: center;
-
-            .quantity_number {
-                margin: 0 10px;
-            }
         }
     }
 }
