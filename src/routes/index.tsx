@@ -4,6 +4,7 @@ import {
     layoutUrl,
     processUrl,
     productdetailUrl,
+    searchUrl,
     signinUrl,
     signupUrl,
 } from "./urls";
@@ -14,6 +15,7 @@ import {
     Home,
     ProcessingBuy,
     ProductDetail,
+    Search,
     Signin,
     Signup,
 } from "../pages";
@@ -51,6 +53,10 @@ export const routerConfig = createBrowserRouter([
             {
                 path: productdetailUrl,
                 element: <ProductDetail />,
+            },
+            {
+                path: searchUrl,
+                element: <Search />,
             },
         ],
     },

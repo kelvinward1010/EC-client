@@ -29,3 +29,8 @@ export const ProductDetail = lazyLoad(
     () => import("./productdetail/views/ProductDetail"),
     (module) => module.ProductDetail,
 );
+
+export const Search = lazyLoad(
+    () => import("./search/views/Search"),
+    (module) => module.Search,
+);

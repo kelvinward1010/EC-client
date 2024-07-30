@@ -6,6 +6,7 @@ export type IProduct = {
     quantity: number;
     price: number;
     star: number;
+    type: string;
     createdAt: string;
     updatedAt: string;
 };
