@@ -1,0 +1,36 @@
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 100px;
+
+    .radiomain {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        width: fit-content;
+        gap: 10px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .paymentmethodpreview {
+        padding: 10px;
+        margin: 10px;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            min-height: 300px;
+            max-height: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}

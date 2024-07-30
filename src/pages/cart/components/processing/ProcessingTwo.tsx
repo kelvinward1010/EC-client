@@ -1,6 +1,5 @@
-import { Button, Form, Input, message } from "antd";
+import { Form, Input } from "antd";
 import styles from "./ProcessingTwo.module.scss";
-import { sessionService } from "../../../../utils/storage";
 
 interface ProcessingTwoProps {
     form: any;
@@ -13,16 +12,6 @@ export type FieldAdressType = {
 };
 
 function ProcessingTwo({ form }: ProcessingTwoProps) {
-    const onFinish = (values: FieldAdressType) => {
-        const data = {
-            name: values.name,
-            phone: values.phone,
-            address: values.address,
-        };
-        sessionService.setStorage("personalinfomation", data);
-        message.success("Saved");
-    };
-
     return (
         <div className={styles.container}>
             <Form
@@ -31,7 +20,6 @@ function ProcessingTwo({ form }: ProcessingTwoProps) {
                 labelCol={{ span: 3 }}
                 wrapperCol={{ span: 19 }}
                 initialValues={{ remember: true }}
-                onFinish={onFinish}
                 autoComplete="off"
             >
                 <Form.Item<FieldAdressType>
@@ -71,12 +59,6 @@ function ProcessingTwo({ form }: ProcessingTwoProps) {
                     ]}
                 >
                     <Input.TextArea rows={2} />
-                </Form.Item>
-
-                <Form.Item wrapperCol={{ offset: 3, span: 19 }}>
-                    <Button className={"button-submit"} htmlType="submit">
-                        Save
-                    </Button>
                 </Form.Item>
             </Form>
         </div>

@@ -21,7 +21,7 @@ function ProcessingOne({ data }: ProcessingOneProps) {
                 ))}
             </div>
             <div className={styles.right}>
-                <Title level={4}>Your invoice</Title>
+                <Title level={5}>Your invoice</Title>
                 <Row>
                     <Col span={10}>
                         <Text>Price:</Text>

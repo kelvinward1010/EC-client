@@ -29,6 +29,11 @@ export function Cart() {
 
     const handleNextStep = () => {
         sessionService.setStorage("datatobuy", checkedList);
+        sessionService.setStorage("yourinvoice", {
+            price: total,
+            shipping_price: 20,
+            totalprice: total + 20,
+        });
         navigate(processUrl);
     };
 
