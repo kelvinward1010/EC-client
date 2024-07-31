@@ -5,8 +5,10 @@ import {
     processUrl,
     productdetailUrl,
     searchUrl,
+    settingUrl,
     signinUrl,
     signupUrl,
+    yourorderUrl,
 } from "./urls";
 import { Layout } from "../pages/app/Layout";
 import { ErrorBoundaryPage } from "../components/error/boundary-error";
@@ -16,8 +18,10 @@ import {
     ProcessingBuy,
     ProductDetail,
     Search,
+    Setting,
     Signin,
     Signup,
+    YourOrder,
 } from "../pages";
 
 export const routerConfig = createBrowserRouter([
@@ -57,6 +61,14 @@ export const routerConfig = createBrowserRouter([
             {
                 path: searchUrl,
                 element: <Search />,
+            },
+            {
+                path: settingUrl,
+                element: <Setting />,
+            },
+            {
+                path: yourorderUrl,
+                element: <YourOrder />,
             },
         ],
     },

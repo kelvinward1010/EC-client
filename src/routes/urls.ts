@@ -10,3 +10,5 @@ export const productdetailUrl = `${productUrl}/:id`;
 export const processUrl = "/processing-to-buy";
 
 export const searchUrl = "/search";
+export const settingUrl = "/setting";
+export const yourorderUrl = "/your-order";

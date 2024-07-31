@@ -34,3 +34,13 @@ export const Search = lazyLoad(
     () => import("./search/views/Search"),
     (module) => module.Search,
 );
+
+export const Setting = lazyLoad(
+    () => import("./setting/views/Setting"),
+    (module) => module.Setting,
+);
+
+export const YourOrder = lazyLoad(
+    () => import("./yourorder/views/YourOrder"),
+    (module) => module.YourOrder,
+);

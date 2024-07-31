@@ -10,20 +10,24 @@ import { useNavigate } from "react-router-dom";
 import {
     cartUrl,
     layoutUrl,
+    settingUrl,
     signinUrl,
     signupUrl,
+    yourorderUrl,
 } from "../../../../routes/urls";
 
 const { Text } = Typography;
 
 function Header() {
     const navigate = useNavigate();
-    const user = false;
+    const user = true;
 
     const goSignup = () => navigate(signupUrl);
     const goSignin = () => navigate(signinUrl);
     const goHome = () => navigate(layoutUrl);
     const goCart = () => navigate(cartUrl);
+    const goSetting = () => navigate(settingUrl);
+    const goYourOrder = () => navigate(yourorderUrl);
 
     const items = [
         {
@@ -31,7 +35,8 @@ function Header() {
                 <>
                     <ButtonConfig
                         className={"button-config"}
-                        lable="Your card"
+                        lable="Your order"
+                        onClick={goYourOrder}
                     />
                 </>
             ),
@@ -42,11 +47,23 @@ function Header() {
                 <>
                     <ButtonConfig
                         className={"button-config"}
-                        lable="Sign Out"
+                        lable="Setting"
+                        onClick={goSetting}
                     />
                 </>
             ),
             key: "1",
+        },
+        {
+            label: (
+                <>
+                    <ButtonConfig
+                        className={"button-config"}
+                        lable="Sign Out"
+                    />
+                </>
+            ),
+            key: "2",
         },
     ];
 
