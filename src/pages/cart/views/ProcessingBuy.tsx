@@ -7,6 +7,7 @@ import ProcessingTwo from "../components/processing/ProcessingTwo";
 import ProcessingThree from "../components/processing/ProcessingThree";
 import ProcessingFour from "../components/processing/ProcessingFour";
 import { PAYMENTMETHODS } from "../../../constant";
+import { IOrderInCart } from "../../../types/order";
 
 export function ProcessingBuy() {
     const [FormPersonalInfomation] = Form.useForm();
@@ -97,11 +98,12 @@ export function ProcessingBuy() {
     };
 
     const handleFinished = useCallback(() => {
-        const carfData = {
+        const carfData: IOrderInCart = {
             personalinfomation: personalinfomation,
-            paymentmethod: paymentmethod,
+            paymentmethod: paymentmethod?.paymentmethod,
             yourinvoice: yourinvoice,
             products: datawillbuy,
+            completed: false,
         };
         console.log(carfData);
         message.success("Processing complete!");
