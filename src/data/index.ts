@@ -1,3 +1,4 @@
+import { IOrder } from "../types/order";
 import { IProduct } from "../types/product";
 import { dataproduced } from "../utils/data";
 
@@ -65,3 +66,42 @@ export const products: IProduct[] = [
 ];
 
 export const dataInCart = dataproduced(products);
+
+export const dataOrdered: IOrder[] = [
+    {
+        paymentmethod: "Thanh toán khi nhận hàng",
+        idUser: "????",
+        personalinfomation: {
+            name: "Kelvin",
+            phone: "037837458",
+            address: "Ha Noi Capital",
+        },
+        products: dataInCart.slice(0, 2),
+        yourinvoice: {
+            price: 120,
+            shipping_price: 10,
+            totalprice: 130,
+        },
+        completed: false,
+        createdAt: "20/07/2024",
+        updatedAt: "20/07/2024",
+    },
+    {
+        paymentmethod: "Thanh toán online",
+        idUser: "????",
+        personalinfomation: {
+            name: "Kelvin",
+            phone: "037837458",
+            address: "Ha Noi Capital",
+        },
+        products: dataInCart.slice(0, 2),
+        yourinvoice: {
+            price: 320,
+            shipping_price: 10,
+            totalprice: 330,
+        },
+        completed: false,
+        createdAt: "22/07/2024",
+        updatedAt: "22/07/2024",
+    },
+];

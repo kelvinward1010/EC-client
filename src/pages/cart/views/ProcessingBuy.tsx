@@ -100,6 +100,7 @@ export function ProcessingBuy() {
     const handleFinished = useCallback(() => {
         const carfData: IOrderInCart = {
             personalinfomation: personalinfomation,
+            idUser: "???",
             paymentmethod: paymentmethod?.paymentmethod,
             yourinvoice: yourinvoice,
             products: datawillbuy,

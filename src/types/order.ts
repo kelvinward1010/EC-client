@@ -2,6 +2,7 @@ import { IProductInCart } from "./product";
 
 export interface IOrder {
     paymentmethod: string;
+    idUser: string;
     personalinfomation: {
         name: string;
         phone: string;
