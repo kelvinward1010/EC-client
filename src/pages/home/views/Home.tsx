@@ -1,3 +1,4 @@
+import Fashion from "../components/Fashion";
 import HotProduct from "../components/HotProduct";
 import TopHeadHome from "../components/TopHeadHome";
 import styles from "./Home.module.scss";
@@ -7,6 +8,7 @@ export function Home() {
         <div className={styles.container}>
             <TopHeadHome />
             <HotProduct />
+            <Fashion />
         </div>
     );
 }
