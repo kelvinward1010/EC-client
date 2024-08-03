@@ -2,14 +2,16 @@ import { Carousel, Flex } from "antd";
 import styles from "./TopHeadHome.module.scss";
 import { DoubleRightOutlined } from "@ant-design/icons";
 import { TYPESPRODUCTS } from "../../../constant";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { searchUrl } from "../../../routes/urls";
 
 function TopHeadHome() {
     const navigate = useNavigate();
+    const [_, setTypesParams] = useSearchParams();
 
-    const handleSearch = () => {
+    const handleSearch = (key: string) => {
         navigate(searchUrl);
+        setTypesParams({ type: key });
     };
 
     return (
@@ -21,7 +23,7 @@ function TopHeadHome() {
                         key={index}
                         justify={"space-between"}
                         align={"center"}
-                        onClick={handleSearch}
+                        onClick={() => handleSearch(type)}
                     >
                         <h5 className={styles.title}>{type}</h5>
                         <DoubleRightOutlined className={styles.icon} />

@@ -5,17 +5,44 @@ import { ButtonConfig } from "../../../components/buttonconfig";
 import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
 import CommentBox from "../components/CommentBox";
 import { useState } from "react";
+import { ModalSmall } from "../../../components/modals/modalSmall";
+import { useNavigate } from "react-router-dom";
+import { signinUrl } from "../../../routes/urls";
 
 const { Text } = Typography;
 
 export function ProductDetail() {
+    const navigate = useNavigate();
     const [quantity, setQuantity] = useState<number>(1);
+    const [openModalIsUser, setOpenModalIsUser] = useState<boolean>(false);
 
     const data = products[0];
-    const current_user = false;
+    const current_user = true;
+
+    const handleGoSignIn = () => {
+        setOpenModalIsUser(false);
+        navigate(signinUrl);
+    };
+
+    const handleAddToCart = () => {
+        if (!current_user) {
+            setOpenModalIsUser(true);
+        } else {
+            console.log("Add");
+        }
+    };
 
     return (
         <div className={styles.container}>
+            {openModalIsUser && (
+                <ModalSmall
+                    message="You need to sign in to add!"
+                    open={openModalIsUser}
+                    setOpen={setOpenModalIsUser}
+                    onClick={handleGoSignIn}
+                    titleButton={"OK"}
+                />
+            )}
             <Row justify={"space-between"} wrap={true}>
                 <Col span={24} sm={10} className={styles.left}>
                     <img src={data?.image} alt="img" className={styles.img} />
@@ -48,11 +75,10 @@ export function ProductDetail() {
                         />
                     </div>
                     <div className={styles.add_cart}>
-                        {current_user ? (
-                            <ButtonConfig lable={"Add to cart"} />
-                        ) : (
-                            <ButtonConfig lable={"Sign in to add your cart"} />
-                        )}
+                        <ButtonConfig
+                            lable={"Add to cart"}
+                            onClick={handleAddToCart}
+                        />
                     </div>
                 </Col>
             </Row>

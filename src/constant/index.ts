@@ -6,6 +6,29 @@ export const TYPESPRODUCTS = [
     "Appliances",
 ];
 
+export const TYPESPRODUCTSCHECKBOX = [
+    {
+        value: "Fashion",
+        label: "Fashion",
+    },
+    {
+        value: "Electronic",
+        label: "Electronic",
+    },
+    {
+        value: "Book",
+        label: "Book",
+    },
+    {
+        value: "Toys",
+        label: "Toys",
+    },
+    {
+        value: "Appliances",
+        label: "Appliances",
+    },
+];
+
 export const PAYMENTMETHODS = [
     {
         value: "Thanh toán khi nhận hàng",

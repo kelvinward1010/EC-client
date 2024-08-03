@@ -5,6 +5,7 @@
     display: flex;
 
     .box1 {
+        height: fit-content;
         border: 1px solid teal;
         border-radius: 5px;
         padding: 10px 5px 10px 10px;
@@ -14,6 +15,9 @@
         border: 1px solid teal;
         border-radius: 5px;
         padding: 10px 10px 10px 5px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 }
 
