@@ -17,8 +17,8 @@ export const searchProducts = (
     data: IProduct[],
 ): IProduct[] => {
     if (
-        (datasearch.types.length <= 0 && datasearch.stars.length <= 0) ||
-        (datasearch.stars[0] == 0 && datasearch.types[0] == "")
+        (datasearch?.types?.length <= 0 && datasearch?.stars?.length <= 0) ||
+        (datasearch?.stars?.[0] == 0 && datasearch?.types?.[0] == "")
     ) {
         return data;
     }
