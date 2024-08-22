@@ -93,8 +93,10 @@ export function Search() {
             <div className={styles.box2}>
                 {searchProducts(
                     {
-                        types: keysSearchOnParams[0].split(",").map(String),
-                        stars: keysSearchStarOnParams[0].split(",").map(Number),
+                        types: keysSearchOnParams[0]?.split(",").map(String),
+                        stars: keysSearchStarOnParams[0]
+                            ?.split(",")
+                            .map(Number),
                     },
                     products,
                 )
