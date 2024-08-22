@@ -8,3 +8,23 @@ export function dataproduced(products: IProduct[]): IProductInCart[] {
         });
     });
 }
+
+export const searchProducts = (
+    datasearch: {
+        types: string[];
+        stars: number[];
+    },
+    data: IProduct[],
+): IProduct[] => {
+    if (
+        (datasearch.types.length <= 0 && datasearch.stars.length <= 0) ||
+        (datasearch.stars[0] == 0 && datasearch.types[0] == "")
+    ) {
+        return data;
+    }
+    return data.filter(
+        (product) =>
+            datasearch?.types.includes(product.type) ||
+            datasearch?.stars.includes(product.star),
+    );
+};
