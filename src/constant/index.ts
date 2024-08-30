@@ -6,6 +6,7 @@ export const TYPESPRODUCTS = [
     "Book",
     "Toys",
     "Appliances",
+    "Technologies",
 ];
 
 export const TYPESPRODUCTSCHECKBOX = [
@@ -28,6 +29,10 @@ export const TYPESPRODUCTSCHECKBOX = [
     {
         value: "Appliances",
         label: "Appliances",
+    },
+    {
+        value: "Technologies",
+        label: "Technologies",
     },
 ];
 
