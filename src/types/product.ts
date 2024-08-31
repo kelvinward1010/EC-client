@@ -14,3 +14,8 @@ export type IProduct = {
 export interface IProductInCart extends IProduct {
     quantityordered: number;
 }
+
+export interface IBasetListProducts {
+    isLoading: boolean;
+    data: IProduct[];
+}

@@ -1,0 +1,23 @@
+.container-nonedatafeedback {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-feedback {
+    text-align: center;
+}
+
+.data-none-image {
+    width: 150px;
+}
+
+.titleCustomizationcontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
