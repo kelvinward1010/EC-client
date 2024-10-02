@@ -5,8 +5,8 @@ import { IProduct } from "../../../types/product";
 import styles from "./Search.module.scss";
 import type { GetProp } from "antd";
 import { useSearchParams } from "react-router-dom";
-import { STARS, TYPESPRODUCTSCHECKBOX } from "../../../constant";
 import { searchProducts } from "../../../utils/data";
+import { STARS, TYPESPRODUCTSCHECKBOX } from "../../../constant/config";
 
 const { Title } = Typography;
 
@@ -34,7 +34,7 @@ export function Search() {
             return newParams;
         });
     };
-    console.log(keysSearchStarOnParams);
+
     return (
         <div className={styles.container}>
             <div className={styles.box1}>

@@ -1,48 +1,7 @@
-export const STARS = [1, 2, 3, 4, 5];
+export const BASE_URL = "https://be-nodejs-mvc.onrender.com/api/";
 
-export const TYPESPRODUCTS = [
-    "Fashion",
-    "Electronic",
-    "Book",
-    "Toys",
-    "Appliances",
-    "Technologies",
-];
-
-export const TYPESPRODUCTSCHECKBOX = [
-    {
-        value: "Fashion",
-        label: "Fashion",
-    },
-    {
-        value: "Electronic",
-        label: "Electronic",
-    },
-    {
-        value: "Book",
-        label: "Book",
-    },
-    {
-        value: "Toys",
-        label: "Toys",
-    },
-    {
-        value: "Appliances",
-        label: "Appliances",
-    },
-    {
-        value: "Technologies",
-        label: "Technologies",
-    },
-];
-
-export const PAYMENTMETHODS = [
-    {
-        value: "Thanh toán khi nhận hàng",
-        label: "Thanh toán khi nhận hàng",
-    },
-    {
-        value: "Thanh toán online",
-        label: "Thanh toán online",
-    },
-];
+//Auth
+export const URL_API_AUTH = "auth";
+export const URL_API_LOGIN = `${URL_API_AUTH}/sign-in`;
+export const URL_API_LOGOUT = `${URL_API_AUTH}/logout`;
+export const URL_API_REFRESHTOKEN = `${URL_API_AUTH}/refresh-token`;

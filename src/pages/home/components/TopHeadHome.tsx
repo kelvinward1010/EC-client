@@ -1,9 +1,9 @@
 import { Carousel, Flex } from "antd";
 import styles from "./TopHeadHome.module.scss";
 import { DoubleRightOutlined } from "@ant-design/icons";
-import { TYPESPRODUCTS } from "../../../constant";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { searchUrl } from "../../../routes/urls";
+import { TYPESPRODUCTS } from "../../../constant/config";
 
 function TopHeadHome() {
     const navigate = useNavigate();

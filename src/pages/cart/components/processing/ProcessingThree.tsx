@@ -1,7 +1,7 @@
 import styles from "./ProcessingThree.module.scss";
 import { Radio, RadioChangeEvent } from "antd";
-import { PAYMENTMETHODS } from "../../../../constant";
 import { cashpaymentImg, onlinepaymentImg } from "../../../../assets/images";
+import { PAYMENTMETHODS } from "../../../../constant/config";
 
 interface ProcessingThreeProps {
     valuePayment: string;

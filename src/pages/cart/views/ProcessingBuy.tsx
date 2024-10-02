@@ -6,8 +6,8 @@ import { sessionService } from "../../../utils/storage";
 import ProcessingTwo from "../components/processing/ProcessingTwo";
 import ProcessingThree from "../components/processing/ProcessingThree";
 import ProcessingFour from "../components/processing/ProcessingFour";
-import { PAYMENTMETHODS } from "../../../constant";
 import { IOrderInCart } from "../../../types/order";
+import { PAYMENTMETHODS } from "../../../constant/config";
 
 export function ProcessingBuy() {
     const [FormPersonalInfomation] = Form.useForm();
